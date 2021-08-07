@@ -46,4 +46,34 @@ func main() {
 	fmt.Println("array2[1] = Posicao alterada")
 	array2[1] = "Posicao alterada"
 	fmt.Println(slice2)
+
+	fmt.Println("\n\nARRAYS INTERNOS")
+
+	// params tipo, tamanho (quantidades de item), capacidade (quantidade máxima, opcional)
+	fmt.Println("slice3 := make([]float32, 10, 11)")
+	slice3 := make([]float32, 10, 11)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3))
+	fmt.Println(cap(slice3))
+
+	fmt.Println("slice3 => appends para testar capacidade")
+	slice3 = append(slice3, 5)
+	fmt.Println(len(slice3))
+	fmt.Println(cap(slice3))
+	fmt.Println(slice3)
+	slice3 = append(slice3, 4)
+	fmt.Println(len(slice3))
+	fmt.Println(cap(slice3))
+	fmt.Println("estourando a capacidade, ele cria um outro array e dobra a capacidade")
+
+	fmt.Println("slice4 := make([]float32, 5)")
+	slice4 := make([]float32, 5)
+	fmt.Println(slice4)
+	fmt.Println(len(slice4))
+	fmt.Println(cap(slice4))
+	slice4 = append(slice4, 4)
+	fmt.Println(slice4)
+	fmt.Println(len(slice4))
+	fmt.Println(cap(slice4))
+
 }
